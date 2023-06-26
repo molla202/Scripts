@@ -10,11 +10,11 @@ git checkout v0.7.2
 make install
 exec > /dev/tty 2>&1
 }
-BinaryName = "babylond"
-NodeName = "babylon"
-binaryversion = "v0.7.2"
-ChainID = "bbn-test-2"
-CustomPort = "311"
+BinaryName="babylond"
+NodeName="babylon"
+binaryversion="v0.7.2"
+ChainID="bbn-test-2"
+CustomPort="311"
 echo -e "\e[0;34m$NodeName Kurulumu Başlatılıyor\033[0m"
 sleep 3
 echo -e '\e[0;35m' && read -p "Moniker isminizi girin: " MONIKER 
