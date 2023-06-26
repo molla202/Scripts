@@ -1,8 +1,8 @@
-sudo systemctl stop $binaryname && \
-sudo systemctl disable $binaryname && \
-rm /etc/systemd/system/$binaryname.service && \
+sudo systemctl stop $BinaryName && \
+sudo systemctl disable $BinaryName && \
+rm /etc/systemd/system/$BinaryName.service && \
 sudo systemctl daemon-reload && \
 cd $HOME && \
-rm -rf .$binaryname && \
+rm -rf .$BinaryName && \
 rm -rf $nodename && \
-rm -rf $(which $binaryname)
+rm -rf $(which $BinaryName)
