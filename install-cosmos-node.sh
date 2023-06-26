@@ -14,11 +14,11 @@ make install
 exec > /dev/tty 2>&1
 }
 # set variables
-BinaryName = "noded"
-NodeName = "project"
-binaryversion = "v.1.1"
-ChainID = "chainid.l"
-CustomPort = "111"
+BinaryName="noded"
+NodeName="project"
+binaryversion="v.1.1"
+ChainID="chainid.l"
+CustomPort="111"
 echo -e "\e[0;34m$NodeName Kurulumu Başlatılıyor\033[0m"
 sleep 3
 # get moniker
