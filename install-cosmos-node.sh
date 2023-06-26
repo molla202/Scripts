@@ -1,9 +1,5 @@
 #!/bin/bash
 clear
-# matrix (optional)
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/matrix.sh | bash
-# Logo
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/socrates.sh | bash
 # install binary function
 install_binary() {
 exec > /dev/null 2>&1
@@ -13,6 +9,22 @@ git checkout ...
 make install
 exec > /dev/tty 2>&1
 }
+# function for genesis, addrbook, peers
+gen_add_peer() {
+exec > /dev/null 2>&1
+curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/---/addrbook.json > $HOME/.$BinaryName/config/addrbook.json
+curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/----/genesis.json > $HOME/.$BinaryName/config/genesis.json
+peers=" "
+seeds=" "
+sed -i -e 's|^seeds *=.*|seeds = "'$seeds'"|; s|^persistent_peers *=.*|persistent_peers = "'$peers'"|' $HOME/.$BinaryName/config/config.toml
+# min gas price
+exec > /dev/tty 2>&1
+}
+# matrix (optional)
+curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/matrix.sh | bash
+# Logo
+curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/socrates.sh | bash
+
 # set variables
 BinaryName="noded"
 NodeName="project"
@@ -51,6 +63,8 @@ echo -e "\e[0;34mYapılandırma Dosyası Ayarları Yapılıyor\033[0m"
 curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/init.sh | bash
 # config
 curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/config.sh | bash
+# genesis addrbok peer seed mingasprice
+gen_add_peer
 # service
 curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/systemctl.sh | bash
 # start
