@@ -53,6 +53,5 @@ echo -e ""
 echo -e ""
 sleep 1
 echo -e "\e[0;34mKurulum Tamamlandı\e[0m\u2600"
-sleep 1
-curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/molla202.sh | bash
+
 
