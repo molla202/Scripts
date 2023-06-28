@@ -1,7 +1,7 @@
 #!/bin/bash
 clear
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/matrix.sh | bash
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/socrates.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/matrix.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/molla202.sh | bash
 install_binary() {
 exec > /dev/null 2>&1
 git clone https://github.com/babylonchain/babylon.git
@@ -27,21 +27,21 @@ echo "export CustomPort=$CustomPort" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 sleep 2
 echo -e ''
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/remove-cosmos-node.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/remove-cosmos-node.sh | bash
 echo -e "\e[0;34mSunucu Hazırlanıyor\033[0m"
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/preparing-server.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/preparing-server.sh | bash
 echo -e "\e[0;34mGo Kuruluyor\033[0m"
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/install-go.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/install-go.sh | bash
 echo -e "\e[0;33m$(go version) Kuruldu\033[0m"
 echo -e "\e[0;34m$BinaryName Kuruluyor\033[0m"
 install_binary
 echo -e "\e[0;33m$BinaryName $($BinaryName version) Kuruldu\033[0m"
 sleep 1
 echo -e "\e[0;34mYapılandırma Dosyası Ayarları Yapılıyor\033[0m"
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/init.sh | bash
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/config.sh | bash
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/systemctl.sh | bash
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/startnode.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/init.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/config.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/systemctl.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/startnode.sh | bash
 sleep 1
 echo -e "\e[0;34mNode Başlatıldı\033[0m"
 sleep 1
@@ -52,6 +52,6 @@ echo -e ""
 sleep 1
 echo -e "\e[0;34mKurulum Tamamlandı\e[0m\u2600"
 sleep 1
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/socrates.sh | bash
-curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/y%C4%B1ld%C4%B1z.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/molla202.sh | bash
+curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/y%C4%B1ld%C4%B1z.sh | bash
 
