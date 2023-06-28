@@ -55,5 +55,4 @@ sleep 1
 echo -e "\e[0;34mKurulum Tamamlandı\e[0m\u2600"
 sleep 1
 curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/molla202.sh | bash
-curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/y%C4%B1ld%C4%B1z.sh | bash
 
