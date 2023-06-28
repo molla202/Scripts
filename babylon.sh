@@ -39,6 +39,8 @@ echo -e "\e[0;33m$BinaryName $($BinaryName version) Kuruldu\033[0m"
 sleep 1
 echo -e "\e[0;34mYapılandırma Dosyası Ayarları Yapılıyor\033[0m"
 curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/init.sh | bash
+curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Babylon/addrbook.json > $HOME/.babylond/config/addrbook.json
+curl -Ls https://raw.githubusercontent.com/Core-Node-Team/Testnet-TR/main/Babylon/genesis.json > $HOME/.babylond/config/genesis.json
 curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/config.sh | bash
 curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/systemctl.sh | bash
 curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/startnode.sh | bash
