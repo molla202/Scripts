@@ -1,6 +1,5 @@
 #!/bin/bash
 clear
-curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/matrix.sh | bash
 curl -sSL https://raw.githubusercontent.com/molla202/Scripts/main/molla202.sh | bash
 install_binary() {
 exec > /dev/null 2>&1
